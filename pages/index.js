@@ -11,6 +11,12 @@ export default function Home() {
 
       <div className="home">
         <div className="container">
+        <div style={{textAlign: "center", marginBottom: 20, paddingBottom: 20}}>
+        <h3 className="weekly__title">
+          Live <span>Weather App</span>
+        </h3>
+        <p>Get the current weather update of any city you can find in next to no time. </p>
+        </div>
           <SearchBox placeholder="Search for a city..." />
           <FamousPlaces />
         </div>
