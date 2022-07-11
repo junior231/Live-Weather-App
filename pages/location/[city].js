@@ -63,7 +63,7 @@ const getCity = (param) => {
 };
 
 const getHourlyWeather = (hourlyData, timezone) => {
-  const endOfDay = moment().tz(timezone).endOf('day').valueOf();
+  const endOfDay = moment().tz(timezone)?.endOf('day')?.valueOf();
   const eodTimeStamp = Math.floor(endOfDay / 1000)
 
   const todaysData = hourlyData.filter(data => data.dt < eodTimeStamp);
@@ -79,7 +79,7 @@ export default function City({ hourlyWeather, city, currentWeather, dailyWeather
       </Head>
 
       <div className='page-wrapper'>
-        <div className='container'>
+        <div className='container' >
           <Link href='/'>
             <a className='back-link'>&larr; Home</a></Link>
           <SearchBox placeholder={'Search another location...'} />
