@@ -83,9 +83,9 @@ export default function City({ hourlyWeather, city, currentWeather, dailyWeather
           <Link href='/'>
             <a className='back-link'>&larr; Home</a></Link>
           <SearchBox placeholder={'Search another location...'} />
-          <TodaysWeather timezone={timezone} city={city} weather={dailyWeather[0]} /> 
-          <HourlyWeather hourlyWeather={hourlyWeather} timezone={timezone} /> 
-          <WeeklyWeather weeklyWeather={dailyWeather} timezone={timezone} />
+          <TodaysWeather timezone={timezone && timezone} city={city && city} weather={dailyWeather && dailyWeather[0]} /> 
+          <HourlyWeather hourlyWeather={hourlyWeather && hourlyWeather} timezone={timezone && timezone} /> 
+          <WeeklyWeather weeklyWeather={dailyWeather && dailyWeather} timezone={ timezone && timezone} />
         </div>  
       </div>  
  
