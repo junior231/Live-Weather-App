@@ -23,8 +23,8 @@ export default function WeeklyWeather({weeklyWeather, timezone}) {
                                 </h3>
 
                                 <h4>
-                                    <span>{weather.temp.max.toFixed(0)}&deg;C</span>
-                                    <span>{weather.temp.min.toFixed(0)}&deg;C</span>
+                                    <span>{weather?.temp.max.toFixed(0)}&deg;C</span>
+                                    <span>{weather?.temp.min.toFixed(0)}&deg;C</span>
                                 </h4>
                             </div>
 
